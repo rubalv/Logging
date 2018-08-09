@@ -4,8 +4,6 @@ import java.text.ParseException;
 
 import org.apache.log4j.Logger;
 
-import com.certant.logging.services.UsuarioService;
-
 public class App {
 	private static final Logger logger = Logger.getLogger(App.class);
 

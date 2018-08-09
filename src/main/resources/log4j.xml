@@ -12,7 +12,7 @@
 	</appender>
 	<!-- Info Log File Appender -->
 	<appender name="info-log" class="org.apache.log4j.FileAppender">
-		<param name="File" value="C:/workspaces/Demo/Logging/logs/info.log" />
+		<param name="File" value="C:/Git/Logging/logs/info.log" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern"
 				value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
@@ -26,7 +26,7 @@
 	<!-- Error Log File Appender -->
 	<appender name="error-log" class="org.apache.log4j.FileAppender">
 		<param name="Append" value="false" />
-		<param name="File" value="C:/workspaces/Demo/Logging/logs/error.log" />
+		<param name="File" value="C:/Git/Logging/logs/error.log" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern"
 				value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
@@ -40,7 +40,7 @@
 	<!-- Fatal Log File Appender -->
 	<appender name="error-log" class="org.apache.log4j.FileAppender">
 		<param name="Append" value="false" />
-		<param name="File" value="C:/workspaces/Demo/Logging/logs/error.log" />
+		<param name="File" value="C:/Git/Logging/logs/error.log" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern"
 				value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />

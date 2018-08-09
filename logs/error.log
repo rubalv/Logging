@@ -1,0 +1,2 @@
+ERROR | 2018-08-09 15:37:00 | [main] logging.App (App.java:11) - Esto es un error
+FATAL | 2018-08-09 15:37:00 | [main] logging.App (App.java:15) - Esto es un fatal
