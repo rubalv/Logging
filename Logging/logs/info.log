@@ -1,0 +1,4 @@
+DEBUG | 2018-08-02 16:47:27 | [main] logging.App (App.java:14) - Esto es un debug
+INFO  | 2018-08-02 16:47:27 | [main] logging.App (App.java:15) - Esto es un info
+DEBUG | 2018-08-02 17:05:19 | [main] logging.App (App.java:14) - Esto es un debug
+INFO  | 2018-08-02 17:05:19 | [main] logging.App (App.java:15) - Esto es un info
