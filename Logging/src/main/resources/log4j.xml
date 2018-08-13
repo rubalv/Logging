@@ -13,7 +13,7 @@
 	<!-- Debug Log File Appender -->
 	<appender name="debug-log" class="org.apache.log4j.FileAppender">
 		<param name="Append" value="false" />
-		<param name="File" value="C:/Git/Logging/logs/debug.log" />
+		<param name="File" value="C:/Git/Mindfitness/Logging/logs/debug.log" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern"
 				value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
@@ -26,7 +26,7 @@
 	</appender>
 	<!-- Info Log File Appender -->
 	<appender name="info-log" class="org.apache.log4j.FileAppender">
-		<param name="File" value="C:/Git/Logging/logs/info.log" />
+		<param name="File" value="C:/Git/Mindfitness/Logging/logs/info.log" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern"
 				value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
@@ -37,10 +37,23 @@
 			<param name="AcceptOnMatch" value="true" />
 		</filter>
 	</appender>
+	<!-- Warning Log File Appender -->
+	<appender name="warning-log" class="org.apache.log4j.FileAppender">
+		<param name="File" value="C:/Git/Mindfitness/Logging/logs/warning.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="warn" />
+			<param name="LevelMax" value="warn" />
+			<param name="AcceptOnMatch" value="true" />
+		</filter>
+	</appender>
 	<!-- Error Log File Appender -->
 	<appender name="error-log" class="org.apache.log4j.FileAppender">
 		<param name="Append" value="false" />
-		<param name="File" value="C:/Git/Logging/logs/error.log" />
+		<param name="File" value="C:/Git/Mindfitness/Logging/logs/error.log" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern"
 				value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
@@ -52,9 +65,9 @@
 		</filter>
 	</appender>
 	<!-- Fatal Log File Appender -->
-	<appender name="error-log" class="org.apache.log4j.FileAppender">
+	<appender name="fatal-log" class="org.apache.log4j.FileAppender">
 		<param name="Append" value="false" />
-		<param name="File" value="C:/Git/Logging/logs/fatal.log" />
+		<param name="File" value="C:/Git/Mindfitness/Logging/logs/fatal.log" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern"
 				value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
@@ -65,7 +78,10 @@
 		</filter>
 	</appender>
 	<logger name="com.certant.logging">
+		<appender-ref ref="debug-log" />
 		<appender-ref ref="info-log" />
+		<appender-ref ref="warning-log" />
 		<appender-ref ref="error-log" />
+		<appender-ref ref="fatal-log" />
 	</logger>
 </log4j:configuration>
