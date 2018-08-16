@@ -77,11 +77,26 @@
 			<param name="AcceptOnMatch" value="true" />
 		</filter>
 	</appender>
+	<!-- General Log File Appender -->
+	<appender name="general" class="org.apache.log4j.FileAppender">
+		<param name="Append" value="false" />
+		<param name="File" value="C:/Git/Mindfitness/Logging/logs/general.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="debug" />
+			<param name="LevelMax" value="fatal" />
+			<param name="AcceptOnMatch" value="true" />
+		</filter>
+	</appender>
 	<logger name="com.certant.logging">
 		<appender-ref ref="debug-log" />
 		<appender-ref ref="info-log" />
 		<appender-ref ref="warning-log" />
 		<appender-ref ref="error-log" />
 		<appender-ref ref="fatal-log" />
+		<appender-ref ref="general" />
 	</logger>
 </log4j:configuration>
