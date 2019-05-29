@@ -8,6 +8,6 @@ public class App {
 
 	public static void main(String[] args) throws ParseException {
 		UsuarioService usuarioService = new UsuarioService();
-		usuarioService.crearUsuario("Rodriguez Barinagarrementeria", "Liliana Jacqueline", "Password01", "20374574453", null);
+		usuarioService.crearUsuario("Rodriguez Barinagarrementeria", "Liliana Jacqueline", "Password01", "20-37457445-3", null);
 	}
 }
